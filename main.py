@@ -28,57 +28,7 @@ import time
 #import sys 
 
 import config
-
-if True:
-    #import aestimo_numpy as aestimo
-    import aestimo_numpy2 as aestimo
-    import database
-    
-    # Import from config file
-    inputfile = __import__(config.inputfilename)
-    aestimo.logger.info("inputfile is %s" %config.inputfilename)
-    
-    # Initialise structure class
-    model = aestimo.StructureFrom(inputfile,database)
-    
-    # Perform the calculation
-    result= aestimo.Poisson_Schrodinger(model)
-    
-    time4 = time.time() #timing audit
-    aestimo.logger.info("total running time (inc. loading libraries) %g s" %(time4 - aestimo.time0))
-    aestimo.logger.info("total running time (exc. loading libraries) %g s" %(time4 - aestimo.time1))
-    
-    # Write the simulation results in files
-    aestimo.save_and_plot(result,model)
-    
-    aestimo.logger.info("""Simulation is finished. All files are closed.Please control the related files.
------------------------------------------------------------------""")
-
-elif False:
-    import aestimo_numpy_h as aestimo
-    import database
-    
-    # Import from config file
-    inputfile = __import__(config.inputfilename)
-    aestimo.logger.info("inputfile is %s" %config.inputfilename)
-    
-    # Initialise structure class
-    model = aestimo.StructureFrom(inputfile,database)
-         
-    # Perform the calculation
-    result = aestimo.Poisson_Schrodinger(model)
-    
-    time4 = time.time() #timing audit
-    aestimo.logger.info("total running time (inc. loading libraries) %g s" %(time4 - aestimo.time0))
-    aestimo.logger.info("total running time (exc. loading libraries) %g s" %(time4 - aestimo.time1))
-    
-    # Write the simulation results in files
-    aestimo.save_and_plot(result,model)
-    
-    aestimo.logger.info("""Simulation is finished. All files are closed.Please control the related files.
------------------------------------------------------------------""")
-else:
-    import aestimo
+import aestimo
 
     
 

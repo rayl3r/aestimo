@@ -12,16 +12,8 @@ T = 60.0 #Kelvin
 
 # COMPUTATIONAL SCHEME
 # 0: Schrodinger
-# 1: Schrodinger + nonparabolicity
 # 2: Schrodinger-Poisson
-# 3: Schrodinger-Poisson with nonparabolicity
-# 4: Schrodinger-Exchange interaction
-# 5: Schrodinger-Poisson + Exchange interaction
-# 6: Schrodinger-Poisson + Exchange interaction with nonparabolicity
-computation_scheme = 3
-
-# Non-parabolic Dispersion Calculations for Fermi-Dirac
-fermi_np_scheme = True
+computation_scheme = 2
 
 # QUANTUM
 # Total subband number to be calculated for electrons

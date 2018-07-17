@@ -1,26 +1,9 @@
 #!/bin/python
 # -*- coding: utf-8 -*-
-"""
- Aestimo 1D Schrodinger-Poisson Solver
- Copyright (C) 2013-2017 Sefer Bora Lisesivdin and Aestimo group
+"""Aestimo 1D Schrodinger-Poisson Solver
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program. See ~/COPYING file or http://www.gnu.org/copyleft/gpl.txt .
-
-    For the list of contributors, see ~/AUTHORS
-
-File Information:
------------------
+setup_cython module:
+--------------------
 This module compiles the cythonised version of the psi_at_inf function used
 by the aestimo.py shooting method (but not by aestimo_eh.py). See 
 psi_at_inf_cython.pyx
@@ -33,6 +16,12 @@ or on windows:
 aestimo.py will then automatically use this faster version as long as the 
 config.py module contains `use_cython = True`.
 """
+
+__author__    = "For the list of contributors, see ~/AUTHORS.md"
+__copyright__ = "Copyright (C) 2013-2017 Sefer Bora Lisesivdin and Aestimo group"
+__license__   = "GPLv3+ WITHOUT ANY WARRANTY"
+__version__   = "1.2.0"
+
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext

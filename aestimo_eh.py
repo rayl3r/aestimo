@@ -1,27 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""Aestimo 1D Schrodinger-Poisson Solver
 
-"""
- Aestimo 1D Schrodinger-Poisson Solver
- Copyright (C) 2013-2017 Sefer Bora Lisesivdin and Aestimo group
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program. See ~/COPYING file or http://www.gnu.org/copyleft/gpl.txt .
-
-    For the list of contributors, see ~/AUTHORS
-
-File Information:
------------------
+aestimo_eh module:
+------------------
 This is the 3x3 k.p aestimo calculator for valence band calculations 
    (Numpy version, there is no classic version for valence band calculations).
 
@@ -46,7 +28,12 @@ class which builds the arrays describing a structure from the same input
 parameters that are found in the sample files. A simple list format is used to 
 describes the structure's layers.
 """
-__version__='1.2.0'
+
+__author__    = "For the list of contributors, see ~/AUTHORS.md"
+__copyright__ = "Copyright (C) 2013-2017 Sefer Bora Lisesivdin and Aestimo group"
+__license__   = "GPLv3+ WITHOUT ANY WARRANTY"
+__version__   = "1.2.0"
+
 import time
 time0 = time.time() # timing audit
 #from scipy.optimize import fsolve

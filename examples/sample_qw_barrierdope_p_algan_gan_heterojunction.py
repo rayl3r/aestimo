@@ -52,9 +52,8 @@ mat_type='Wurtzite'
 # To input this list in Gallium, we use lists as:
 
 
-material =[[ 14.0, 'GaN', 0.0, 0.0,0.0, 'i','NA'],
-           [ 30.0, 'AlGaN', 0.3, 0.0,0.0, 'i','NA'],
-            [ 40.0, 'GaN', 0.0, 0.0,  0.0, 'i','NA']]
+material =[[ 20.0, 'AlGaN', 0.3, 0.0,0.0, 'i','NA'],
+            [ 100.0, 'GaN', 0.0, 0.0,  0.0, 'i','NA']]
 
 material1 =[[ 100.0, 'GaN', 0.0, 0.0,0.0, 'i','NA'],
            [ 17.0, 'AlGaN', 0.3, 0.0,0.0, 'i','NA'],

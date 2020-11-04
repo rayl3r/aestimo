@@ -5067,9 +5067,9 @@ def save_and_plot(result, model):
     if config.resultviewer:
         span = np.ones(100000000)
         fig1 = pl.figure(figsize=(10, 8))
-        pl.suptitle("Aestimo Results - at Equilibrium Condition")
+        pl.suptitle("Aestimo Results - at Equilibrium Condition. Test")
         pl.subplot(1, 1, 1)
-        pl.plot(xaxis, result.fitot * J2meV, "k", xaxis, result.fitotc * J2meV, "k")
+        pl.plot(xaxis, result.fitot * J2meV, "k", xaxis, result.fitotc * J2meV, "k", label="Wv")
         for j in range(1, result.N_wells_virtual - 1):
             I1, I2, I11, I22 = amort_wave(j, result.Well_boundary, model.n_max)
             i1 = I1 - I1
@@ -5081,7 +5081,7 @@ def save_and_plot(result, model):
                 pl.plot(
                     xaxis[I1:I2],
                     statec[i1:i2] * config.wavefunction_scalefactor + levelc,
-                    "b",
+                    "b", label="Electron concentration"
                 )
                 pl.plot(xaxis[I1:I2], levelc * span[I1:I2], "g", ls="--")
             for level, state in zip(
@@ -5091,15 +5091,16 @@ def save_and_plot(result, model):
                 pl.plot(
                     xaxis[I1:I2],
                     state[i1:i2] * config.wavefunction_scalefactor + level,
-                    "b",
+                    "b", label="Hole concentration"
                 )
                 pl.plot(xaxis[I1:I2], level * span[I1:I2], "g", ls="--")
             # pl.plot(xaxis, state**2*1e-9/dx*200.0+level,'b')
-        pl.plot(xaxis, result.EF * span[0 : model.n_max], "r", ls="--")
+        pl.plot(xaxis, result.EF * span[0 : model.n_max], "r", ls="--", label="Fermi")
         # pl.axhline(result.E_F,0.1,0.9,color='r',ls='--')
         pl.xlabel("Position (m)")
         pl.ylabel("Energy (meV)")
         pl.grid(True)
+        pl.legend()
 
         fig2 = pl.figure(figsize=(10, 8))
         pl.suptitle(
